@@ -39,10 +39,10 @@ p{
   margin-bottom:40px;
 }
 
-/* grid */
+/* GRID (3 columns for aesthetic layout) */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(3, 1fr);
   gap:20px;
 }
 
@@ -58,7 +58,7 @@ img:hover{
   transform:scale(1.03);
 }
 
-/* button */
+/* back button */
 a{
   display:inline-block;
   margin:40px auto 0;
@@ -79,6 +79,19 @@ a:hover{
   text-align:center;
 }
 
+/* responsive for mobile */
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media(max-width:480px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 
@@ -92,9 +105,12 @@ a:hover{
 
 <div class="grid">
 
-<img src="palette1.png">
-<img src="palette2.png">
-<img src="palette3.png">
+<img src="palette1.png" alt="palette 1">
+<img src="palette2.png" alt="palette 2">
+<img src="palette3.png" alt="palette 3">
+<img src="palette4.png" alt="palette 4">
+<img src="palette5.png" alt="palette 5">
+<img src="palette6.png" alt="palette 6">
 
 </div>
 
