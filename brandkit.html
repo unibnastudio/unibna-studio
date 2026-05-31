@@ -24,7 +24,7 @@ body{
 
 .container{
   width:90%;
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:80px 0;
 }
@@ -42,97 +42,84 @@ body{
   line-height:1.7;
 }
 
-/* GALLERY LAYOUT */
+/* PRODUCT LAYOUT */
 
-.gallery{
+.product{
   display:flex;
-  gap:18px;
+  gap:40px;
   align-items:flex-start;
   margin-bottom:60px;
 }
 
-/* THUMBNAILS LEFT */
+/* LEFT SIDE (GALLERY) */
+
+.gallery{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
 
 .thumbnails{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:10px;
 }
 
 .thumbnails img{
-  width:90px;
-  height:90px;
+  width:65px;
+  height:65px;
   object-fit:cover;
-  border-radius:14px;
+  border-radius:10px;
   cursor:pointer;
-  transition:transform 0.25s ease;
-  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
 }
-
-.thumbnails img:hover{
-  transform:scale(1.08);
-}
-
-/* MAIN IMAGE BOX */
 
 .main-image{
-  width:650px;
-  height:650px;
-  max-width:100%;
-  border-radius:22px;
+  width:420px;
+  height:420px;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
-
-/* MAIN IMAGE + ZOOM */
 
 .main-image img{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
-  transition:transform 0.4s ease;
 }
 
-/* ZOOM ON HOVER */
-.main-image:hover img{
-  transform:scale(1.08);
-}
+/* RIGHT SIDE (INFO) */
 
-/* TEXT */
+.info{
+  flex:1;
+}
 
 .section-title{
   font-family:'Playfair Display', serif;
   font-size:30px;
-  margin-bottom:15px;
-}
-
-.list{
-  color:#6D6943;
-  line-height:2;
-  margin-bottom:50px;
-  font-size:15px;
-}
-
-/* PURCHASE BOX */
-
-.purchase-box{
-  background:white;
-  padding:32px;
-  border-radius:24px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.05);
-  max-width:620px;
+  margin-bottom:12px;
 }
 
 .price{
   font-size:34px;
-  margin:15px 0;
+  margin:10px 0 20px;
   font-family:'Playfair Display', serif;
 }
 
 .note{
   color:#6D6943;
   line-height:1.9;
+  font-size:15px;
+}
+
+/* INCLUDED LIST */
+
+.list{
+  color:#6D6943;
+  line-height:2;
+  margin-bottom:50px;
+  font-size:15px;
 }
 
 /* BUTTON */
@@ -155,14 +142,9 @@ body{
 
 /* MOBILE */
 
-@media (max-width:768px){
-  .gallery{
+@media (max-width:900px){
+  .product{
     flex-direction:column;
-  }
-
-  .thumbnails{
-    flex-direction:row;
-    flex-wrap:wrap;
   }
 
   .main-image{
@@ -171,8 +153,9 @@ body{
     aspect-ratio:1/1;
   }
 
-  .main-image img{
-    height:auto;
+  .thumbnails{
+    flex-direction:row;
+    flex-wrap:wrap;
   }
 }
 
@@ -189,8 +172,11 @@ body{
 branding tools + content ideas for student businesses and small creators
 </div>
 
-<!-- GALLERY -->
+<!-- PRODUCT SECTION -->
 
+<div class="product">
+
+<!-- LEFT -->
 <div class="gallery">
 
 <div class="thumbnails">
@@ -205,7 +191,8 @@ branding tools + content ideas for student businesses and small creators
 
 </div>
 
-<!-- INCLUDED -->
+<!-- RIGHT -->
+<div class="info">
 
 <h2 class="section-title">what’s included</h2>
 
@@ -214,33 +201,26 @@ branding tools + content ideas for student businesses and small creators
 • aesthetic color palettes <br>
 • font pairings <br>
 • mini moodboards <br>
-• branding inspiration pages <br>
-• content page ideas <br>
+• content ideas pages <br>
 • caption starters <br>
-• creative direction guidance <br>
+• branding guidance <br>
 </div>
 
-<!-- PURCHASE -->
-
-<div class="purchase-box">
-
-<h2 class="section-title">how to purchase</h2>
-
+<div class="section-title">price</div>
 <div class="price">$12</div>
 
 <p class="note">
 To purchase this digital product, message @unibna.studio on Instagram or use the contact form on the website.
 <br><br>
 
-Payments accepted:
-<br><br>
+Payments accepted:<br>
+• Zelle<br>
+• Cash App<br><br>
 
-• Zelle <br>
-• Cash App
-<br><br>
-
-After payment, the full digital kit will be sent directly to your email.
+After payment, the full kit will be sent directly to your email.
 </p>
+
+</div>
 
 </div>
 
