@@ -39,20 +39,45 @@ body{
   color:#6D6943;
   max-width:600px;
   margin-bottom:40px;
+  line-height:1.7;
 }
 
-.preview-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-  margin-bottom:50px;
+/* GALLERY */
+
+.gallery{
+  margin-bottom:60px;
 }
 
-.preview-grid img{
+.main-image img{
   width:100%;
-  border-radius:18px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  max-width:720px;
+  border-radius:22px;
+  display:block;
+  margin:auto;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
+
+.thumbnails{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:22px;
+  flex-wrap:wrap;
+}
+
+.thumbnails img{
+  width:120px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:all 0.25s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+.thumbnails img:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
 
 .section-title{
   font-family:'Playfair Display', serif;
@@ -64,26 +89,31 @@ body{
   color:#6D6943;
   line-height:2;
   margin-bottom:50px;
+  font-size:15px;
 }
+
+/* PURCHASE BOX */
 
 .purchase-box{
   background:white;
-  padding:30px;
-  border-radius:20px;
+  padding:32px;
+  border-radius:24px;
   box-shadow:0 6px 18px rgba(0,0,0,0.05);
-  max-width:600px;
+  max-width:620px;
 }
 
 .price{
-  font-size:30px;
+  font-size:34px;
   margin:15px 0;
   font-family:'Playfair Display', serif;
 }
 
 .note{
   color:#6D6943;
-  line-height:1.8;
+  line-height:1.9;
 }
+
+/* BUTTON */
 
 .back{
   display:inline-block;
@@ -93,7 +123,7 @@ body{
   border:1px solid #48372F;
   padding:10px 18px;
   border-radius:999px;
-  transition:0.25s;
+  transition:all 0.25s ease;
 }
 
 .back:hover{
@@ -108,41 +138,66 @@ body{
 
 <div class="container">
 
-<div class="title">Mini Brand Starter Kit</div>
+<div class="title">
+Mini Brand Starter Kit
+</div>
 
 <div class="subtitle">
 branding tools + content ideas for student businesses and small creators
 </div>
 
-<div class="preview-grid">
-<img src="kit1.png">
-<img src="kit2.png">
-<img src="kit3.png">
+<!-- IMAGE GALLERY -->
+
+<div class="gallery">
+
+<div class="main-image">
+<img id="currentImage" src="kit1.png">
 </div>
 
-<h2 class="section-title">what’s included</h2>
+<div class="thumbnails">
+<img src="kit1.png" onclick="changeImage(this)">
+<img src="kit2.png" onclick="changeImage(this)">
+<img src="kit3.png" onclick="changeImage(this)">
+</div>
+
+</div>
+
+<!-- INCLUDED -->
+
+<h2 class="section-title">
+what’s included
+</h2>
 
 <div class="list">
-• 6 brand identities <br>
-• curated color palettes <br>
+• 6 curated brand identities <br>
+• aesthetic color palettes <br>
 • font pairings <br>
 • mini moodboards <br>
-• content ideas pages <br>
+• branding inspiration pages <br>
+• content page ideas <br>
 • caption starters <br>
-• branding guidance <br>
+• creative direction guidance <br>
 </div>
+
+<!-- PURCHASE -->
 
 <div class="purchase-box">
 
-<h2 class="section-title">how to purchase</h2>
+<h2 class="section-title">
+how to purchase
+</h2>
 
-<div class="price">$12</div>
+<div class="price">
+$12
+</div>
 
 <p class="note">
 To purchase this digital product, message @unibna.studio on Instagram or use the contact form on the website.
+<br><br>
 
 Payments accepted:
 <br><br>
+
 • Zelle <br>
 • Cash App
 <br><br>
@@ -152,9 +207,17 @@ After payment, the full digital kit will be sent directly to your email.
 
 </div>
 
-<a class="back" href="index.html">back to website</a>
+<a class="back" href="index.html">
+back to website
+</a>
 
 </div>
+
+<script>
+function changeImage(element){
+  document.getElementById("currentImage").src = element.src;
+}
+</script>
 
 </body>
 </html>
